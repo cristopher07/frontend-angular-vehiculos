@@ -1,0 +1,26 @@
+<div class="container mt-4">
+    <h2>Tipos de Placa</h2>
+  
+    <button class="btn btn-primary mb-3" (click)="openNewMarca()">Nuevo Tipo de Placa</button>
+  
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Descripción</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let marca of marcas">
+          <td>{{ marca.idMarca }}</td>
+          <td>{{ marca.descripcion }}</td>
+          <td>
+            <button class="btn btn-warning" (click)="edit(marca)">Editar</button>
+            <button class="btn btn-danger" (click)="delete(marca.idMarca)">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  

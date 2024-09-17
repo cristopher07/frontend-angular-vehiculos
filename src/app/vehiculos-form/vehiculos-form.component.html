@@ -1,0 +1,57 @@
+<div class="container mt-4">
+    <h2>{{ editMode ? 'Editar Vehículo' : 'Nuevo vehículo' }}</h2>
+    <form (ngSubmit)="saveVehiculo()">
+      <div class="row">
+        <!-- Placa -->
+        <div class="col-md-6 mb-3">
+          <label for="placa">Placa</label>
+          <input type="text" id="placa" [(ngModel)]="vehiculo.placa" name="placa" class="form-control" required>
+        </div>
+
+        <!-- Modelo -->
+        <div class="col-md-6 mb-3">
+          <label for="modelo">Modelo</label>
+          <input type="text" id="modelo" [(ngModel)]="vehiculo.modelo" name="modelo" class="form-control" required>
+        </div>
+      </div>
+
+      <div class="row">
+        <!-- Color -->
+        <div class="col-md-6 mb-3">
+          <label for="color">Color</label>
+          <select id="color" [(ngModel)]="vehiculo.idColor" name="idColor" class="form-control" required>
+            <option *ngFor="let color of colores" [value]="color.idColor">{{ color.descripcion }}</option>
+          </select>
+        </div>
+
+        <!-- Tipo de Combustible -->
+        <div class="col-md-6 mb-3">
+          <label for="tipoCombustible">Tipo de Combustible</label>
+          <select id="tipoCombustible" [(ngModel)]="vehiculo.idTipoCombustible" name="idTipoCombustible" class="form-control" required>
+            <option *ngFor="let combustible of combustibles" [value]="combustible.idTipoCombustible">{{ combustible.descripcion }}</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <!-- Tipo de Placa -->
+        <div class="col-md-6 mb-3">
+          <label for="tipoPlaca">Tipo de Placa</label>
+          <select id="tipoPlaca" [(ngModel)]="vehiculo.idTipoPlaca" name="idTipoPlaca" class="form-control" required>
+            <option *ngFor="let tipoPlaca of tiposPlaca" [value]="tipoPlaca.idTipoPlaca">{{ tipoPlaca.descripcion }}</option>
+          </select>
+        </div>
+
+        <!-- Marca -->
+        <div class="col-md-6 mb-3">
+          <label for="marca">Marca</label>
+          <select id="marca" [(ngModel)]="vehiculo.idMarca" name="idMarca" class="form-control" required>
+            <option *ngFor="let marca of marcas" [value]="marca.idMarca">{{ marca.descripcion }}</option>
+          </select>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-success">Guardar</button>
+      <button type="button" class="btn btn-secondary" (click)="cancel()">Cancelar</button>
+    </form>
+</div>

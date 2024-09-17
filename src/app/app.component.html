@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <!-- <a class="navbar-brand" routerLink="/">MY APP</a> -->
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <!-- Vehículos -->
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/vehiculos" routerLinkActive="active">Vehículos</a>
+      </li>
+
+      <!-- Dropdown para Catálogos -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="catalogosDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Catálogos
+        </a>
+        <div class="dropdown-menu" aria-labelledby="catalogosDropdown">
+          <a class="dropdown-item" routerLink="/tipo-placa" routerLinkActive="active">Tipo Placa</a>
+          <a class="dropdown-item" routerLink="/color" routerLinkActive="active">Color</a>
+          <a class="dropdown-item" routerLink="/tipo-gasolina" routerLinkActive="active">Tipo Gasolina</a>
+          <a class="dropdown-item" routerLink="/marca" routerLinkActive="active">Marca</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<router-outlet></router-outlet> <!-- Aquí se mostrarán las rutas -->

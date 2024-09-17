@@ -1,0 +1,26 @@
+<div class="container mt-4">
+    <h2>Tipos de Gasolina</h2>
+  
+    <button class="btn btn-primary mb-3" (click)="openNewTipotipoGasolina()">Nuevo Tipo de Gasolina</button>
+  
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Descripción</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let tipoGasolina of tiposGasolinas">
+          <td>{{ tipoGasolina.idTipoCombustible }}</td>
+          <td>{{ tipoGasolina.descripcion }}</td>
+          <td>
+            <button class="btn btn-warning" (click)="edit(tipoGasolina)">Editar</button>
+            <button class="btn btn-danger" (click)="delete(tipoGasolina.idTipoCombustible)">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  

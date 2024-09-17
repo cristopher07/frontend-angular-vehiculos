@@ -1,0 +1,10 @@
+<div class="container mt-4">
+    <h2>{{ editMode ? 'Editar Tipo de Placa' : 'Nuevo Tipo de Placa' }}</h2>
+    <form (ngSubmit)="savePlaca()">
+      <div class="mb-3">
+        <input type="text" id="descripcion" [(ngModel)]="placa.descripcion" name="descripcion" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-success">Guardar</button>
+      <button type="button" class="btn btn-secondary" (click)="cancel()">Cancelar</button>
+    </form>
+  </div>

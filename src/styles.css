@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+/* Estilos para las notificaciones de éxito */
+.toast-success {
+    border: 2px solid green; /* Cambia el borde a verde */
+    background-color: #dff0d8; /* Color de fondo para éxito */
+    color: #3c763d; /* Color de texto para éxito */
+  }
+  
+  /* Puedes también modificar otros tipos de notificaciones */
+  .toast-error {
+    border: 2px solid red; /* Cambia el borde a rojo */
+    background-color: #f2dede; /* Color de fondo para error */
+    color: #a94442; /* Color de texto para error */
+  }

@@ -1,0 +1,10 @@
+<div class="container mt-4">
+    <h2>{{ editMode ? 'Editar Tipo de Combustible' : 'Nuevo Tipo de Combustible' }}</h2>
+    <form (ngSubmit)="savePlaca()">
+      <div class="mb-3">
+        <input type="text" id="descripcion" [(ngModel)]="tipoGasolina.descripcion" name="descripcion" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-success">Guardar</button>
+      <button type="button" class="btn btn-secondary" (click)="cancel()">Cancelar</button>
+    </form>
+  </div>

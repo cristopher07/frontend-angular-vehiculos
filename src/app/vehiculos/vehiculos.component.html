@@ -1,0 +1,36 @@
+<div class="container mt-4">
+    <h2>Vehículo</h2>
+  
+    <button class="btn btn-primary mb-3" (click)="openNewVehiculo()">Nuevo Vehículo</button>
+  
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Placa</th>
+          <th>Modelo</th>
+          <th>Color</th>
+          <th>Marca</th>
+          <th>Tipo Combustible</th>
+          <th>Tipo Placa</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let vehiculo of vehiculos">
+          <td>{{ vehiculo.idVehiculo }}</td>
+          <td>{{ vehiculo.placa }}</td>
+          <td>{{ vehiculo.modelo }}</td>
+          <td>{{ vehiculo.descripcionColor }}</td>
+          <td>{{ vehiculo.descripcionMarca }}</td>
+          <td>{{ vehiculo.descripcionTipoCombustible }}</td>
+          <td>{{ vehiculo.descripcionTipoPlaca }}</td>
+          <td>
+            <button class="btn btn-warning" (click)="edit(vehiculo)">Editar</button>
+            <button class="btn btn-danger" (click)="delete(vehiculo.idVehiculo)">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  

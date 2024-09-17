@@ -1,0 +1,27 @@
+
+<div class="container mt-4">
+    <h2>Tipos de Color</h2>
+  
+    <button class="btn btn-primary mb-3" (click)="openNewColor()">Nuevo Color</button>
+  
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Descripción</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let color of colores">
+          <td>{{ color.idColor }}</td>
+          <td>{{ color.descripcion }}</td>
+          <td>
+            <button class="btn btn-warning" (click)="edit(color)">Editar</button>
+            <button class="btn btn-danger" (click)="delete(color.idColor)">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  
